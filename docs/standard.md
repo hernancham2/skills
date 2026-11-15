@@ -74,7 +74,7 @@ To check that it activates well, write about twenty realistic requests, half tha
 
 ## 3. Body
 
-Sections of the [template](../template/SKILL.md), in this order. They are a starting point: adapt the structure to the task (for example, principles and modes depending on what you are given, as in the `req-*` and `des-*` skills), remove those that do not apply and leave no empty sections.
+Sections of the [template](../template/SKILL.template.md), in this order. They are a starting point: adapt the structure to the task (for example, principles and modes depending on what you are given, as in the `req-*` and `des-*` skills), remove those that do not apply and leave no empty sections.
 
 | Section | Content |
 | --- | --- |

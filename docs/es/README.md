@@ -60,7 +60,7 @@ El catálogo completo, con la descripción de cada skill, qué lee y qué escrib
 
 ```text
 skills/<fase>/<prefijo>-<nombre>/SKILL.md   las skills, agrupadas por fase
-template/SKILL.md                           plantilla base de una skill
+template/SKILL.template.md                        plantilla base de una skill
 skills.config.json                          fases, prefijos y datos del marketplace
 scripts/                                    crear, validar y generar manifiestos
 .claude-plugin/marketplace.json             generado; no se edita a mano

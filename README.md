@@ -143,7 +143,7 @@ Project context, planning, estimation, risks and progress tracking.
 
 ```text
 skills/<phase>/<prefix>-<name>/SKILL.md     the skills, grouped by phase
-template/SKILL.md                           base template for a skill
+template/SKILL.template.md                        base template for a skill
 skills.config.json                          phases, prefixes and marketplace data
 scripts/                                    create, validate and generate manifests
 .claude-plugin/marketplace.json             generated; do not edit by hand

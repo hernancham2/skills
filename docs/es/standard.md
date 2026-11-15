@@ -74,7 +74,7 @@ Para comprobar que se activa bien, escribe unas veinte peticiones realistas: la 
 
 ## 3. Cuerpo
 
-Secciones de la [plantilla](../../template/SKILL.md), en este orden. Son un punto de partida: adapta la estructura a la tarea (por ejemplo, principios y modos según lo que se te da, como en las skills `req-*` y `des-*`), elimina las que no apliquen y no dejes secciones vacías.
+Secciones de la [plantilla](../../template/SKILL.template.md), en este orden. Son un punto de partida: adapta la estructura a la tarea (por ejemplo, principios y modos según lo que se te da, como en las skills `req-*` y `des-*`), elimina las que no apliquen y no dejes secciones vacías.
 
 | Sección | Contenido |
 | --- | --- |

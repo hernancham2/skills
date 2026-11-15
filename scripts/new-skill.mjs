@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Creates a new skill from template/SKILL.md.
+// Creates a new skill from template/SKILL.template.md.
 //   npm run new -- <phase|prefix> <name>
 //   npm run new -- req elicit   ->  skills/requirements/req-elicit/SKILL.md
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -29,7 +29,7 @@ if (existsSync(target)) fail(`skills/${phase.id}/${name} already exists.`);
 
 const title = base.replace(/-/g, ' ').replace(/^./, (c) => c.toUpperCase());
 const values = { name, title, phase: phase.id, author: config.author.name, license: config.license };
-const content = readFileSync(join(ROOT, 'template', 'SKILL.md'), 'utf8').replace(
+const content = readFileSync(join(ROOT, 'template', 'SKILL.template.md'), 'utf8').replace(
   /\{\{(\w+)\}\}/g,
   (_, key) => values[key] ?? `{{${key}}}`,
 );
