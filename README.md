@@ -1,14 +1,14 @@
 <div align="center">
 
-<img src="assets/logo.svg" alt="Software Engineering Skills logo" width="120" height="120">
+<img src="assets/logo.svg" alt="Skills logo" width="120" height="120">
 
-# Software Engineering Skills
+# Skills
 
-**Agent Skills that guide a software project through its whole lifecycle, from the first requirement to the last release.**
+**Agent Skills that guide a software project through its whole lifecycle, from the first requirement to the last release, plus a few general-purpose tools for working better.**
 
-[![Stars](https://img.shields.io/github/stars/hernancham2/software-engineering-skills?style=flat&color=2563EB)](https://github.com/hernancham2/software-engineering-skills/stargazers)
-[![License: MIT](https://img.shields.io/github/license/hernancham2/software-engineering-skills?color=2563EB)](LICENSE)
-[![Last commit](https://img.shields.io/github/last-commit/hernancham2/software-engineering-skills?color=2563EB)](https://github.com/hernancham2/software-engineering-skills/commits/main)
+[![Stars](https://img.shields.io/github/stars/hernancham2/skills?style=flat&color=2563EB)](https://github.com/hernancham2/skills/stargazers)
+[![License: MIT](https://img.shields.io/github/license/hernancham2/skills?color=2563EB)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/hernancham2/skills?color=2563EB)](https://github.com/hernancham2/skills/commits/main)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-2563EB)](https://agentskills.io/specification)
 
 **English** · [Español](docs/es/README.md) · [Documentation](docs/en/README.md) · [Skill catalog](docs/en/README.md#catalog)
@@ -23,12 +23,13 @@ AI agents answer better when they know what was already decided. These skills ma
 - **A shared project context.** Skills read and write a small set of files that any person or agent can open. No hidden state.
 - **Portable.** They follow the open [Agent Skills](https://agentskills.io/specification) format, so they work in Claude Code, Codex / ChatGPT, Gemini CLI, Antigravity, opencode, Cursor, GitHub Copilot and any compatible agent.
 - **Install only what you use.** One plugin per phase in Claude Code, or a single skill with the `skills` CLI.
+- **Beyond software.** A `productivity` group holds general-purpose skills, such as `grill-me`, that question a plan until it holds up. They have no phase and write no project files.
 - **They answer in your language.** The skills are written in English and reply in the language of whoever asks.
 
 ## Quick start
 
 ```bash
-npx skills add hernancham2/software-engineering-skills
+npx skills add hernancham2/skills
 ```
 
 Then ask your agent, in your own words, to start a project:
@@ -41,10 +42,10 @@ More ways to install:
 
 | You use | Command |
 | --- | --- |
-| Claude Code (one plugin per phase) | `claude plugin marketplace add hernancham2/software-engineering-skills` |
-| One skill only | `npx skills add hernancham2/software-engineering-skills --skill req-elicit` |
-| A specific agent | `npx skills add hernancham2/software-engineering-skills -a codex` |
-| Gemini CLI | `gemini skills install https://github.com/hernancham2/software-engineering-skills.git --path skills/requirements/req-elicit` |
+| Claude Code (one plugin per phase) | `claude plugin marketplace add hernancham2/skills` |
+| One skill only | `npx skills add hernancham2/skills --skill req-elicit` |
+| A specific agent | `npx skills add hernancham2/skills -a codex` |
+| Gemini CLI | `gemini skills install https://github.com/hernancham2/skills.git --path skills/requirements/req-elicit` |
 
 Options, plugin names and every platform are in [Publishing and installation](docs/en/publishing.md).
 
@@ -68,7 +69,7 @@ Each phase gathers information in `docs/<phase>/`, turns it into decisions in it
 
 <!-- PHASES:START -->
 
-**31 skills** in **9 phases**.
+**32 skills** in **10 phases**.
 
 | Phase | Decides | Skills |
 | --- | --- | --- |
@@ -81,6 +82,7 @@ Each phase gathers information in `docs/<phase>/`, turns it into decisions in it
 | Delivery and operations | `OPERATIONS.md` | [`ops-define`](skills/delivery/ops-define/SKILL.md) · [`ops-discover`](skills/delivery/ops-discover/SKILL.md) · [`ops-incident`](skills/delivery/ops-incident/SKILL.md) · [`ops-validate`](skills/delivery/ops-validate/SKILL.md) |
 | Maintenance and evolution | `CHANGELOG.md` | [`mnt-changelog`](skills/maintenance/mnt-changelog/SKILL.md) · [`mnt-debt`](skills/maintenance/mnt-debt/SKILL.md) · [`mnt-migrate`](skills/maintenance/mnt-migrate/SKILL.md) |
 | Project management | `ROADMAP.md` | [`pm-context`](skills/management/pm-context/SKILL.md) · [`pm-plan`](skills/management/pm-plan/SKILL.md) · [`pm-risks`](skills/management/pm-risks/SKILL.md) · [`pm-status`](skills/management/pm-status/SKILL.md) |
+| Productivity | — | [`grill-me`](skills/productivity/grill-me/SKILL.md) |
 
 <!-- PHASES:END -->
 

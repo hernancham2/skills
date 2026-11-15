@@ -1,6 +1,6 @@
 {
-  "name": "software-engineering-skills",
-  "description": "Software engineering skills organized by lifecycle phase",
+  "name": "skills",
+  "description": "Agent Skills for the software lifecycle, plus productivity tools",
   "version": "0.1.0",
   "owner": {
     "name": "Hernan"
@@ -107,6 +107,15 @@
         "./skills/management/pm-plan",
         "./skills/management/pm-risks",
         "./skills/management/pm-status"
+      ]
+    },
+    {
+      "name": "productivity",
+      "description": "General-purpose working skills that do not belong to a lifecycle phase: thinking, deciding and communicating better",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/productivity/grill-me"
       ]
     }
   ]

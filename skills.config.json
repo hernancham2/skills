@@ -1,13 +1,13 @@
 {
   "marketplace": {
-    "name": "software-engineering-skills",
-    "description": "Software engineering skills organized by lifecycle phase",
+    "name": "skills",
+    "description": "Agent Skills for the software lifecycle, plus productivity tools",
     "version": "0.1.0"
   },
   "author": {
     "name": "Hernan"
   },
-  "repository": "hernancham2/software-engineering-skills",
+  "repository": "hernancham2/skills",
   "license": "MIT",
   "pluginPrefix": "se",
   "context": {
@@ -77,6 +77,14 @@
       "title": "Project management",
       "primitive": "ROADMAP.md",
       "description": "Project context, planning, estimation, risks and progress tracking"
+    },
+    {
+      "id": "productivity",
+      "prefix": "",
+      "plugin": "productivity",
+      "title": "Productivity",
+      "primitive": "",
+      "description": "General-purpose working skills that do not belong to a lifecycle phase: thinking, deciding and communicating better"
     }
   ]
 }

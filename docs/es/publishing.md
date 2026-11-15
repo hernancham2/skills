@@ -15,7 +15,7 @@ Antes de publicar:
 No hay formulario de alta. [skills.sh](https://skills.sh) es un ranking alimentado por la telemetría anónima de la CLI `skills`: el repositorio aparece cuando alguien instala desde él.
 
 ```bash
-npx skills add hernancham2/software-engineering-skills
+npx skills add hernancham2/skills
 ```
 
 La CLI encuentra las skills en `skills/<fase>/<nombre>/SKILL.md` (recorre `skills/` hasta tres niveles de profundidad) y también lee `.claude-plugin/marketplace.json`. Con `-a <agente>` instala en la carpeta de cada agente:
@@ -32,18 +32,18 @@ Una skill con `metadata.internal: "true"` queda oculta para la CLI; sirve para b
 
 ## Claude Code
 
-El archivo [`.claude-plugin/marketplace.json`](../../.claude-plugin/marketplace.json) convierte el repositorio en un marketplace con un plugin por fase (`se-<fase>`). `npm run generate` lo produce; no se edita a mano.
+El archivo [`.claude-plugin/marketplace.json`](../../.claude-plugin/marketplace.json) convierte el repositorio en un marketplace con un plugin por fase (`se-<fase>`) y un plugin `productivity` para las skills de uso general. `npm run generate` lo produce; no se edita a mano.
 
 ```bash
 claude plugin validate .
 ```
 
 ```bash
-claude plugin marketplace add hernancham2/software-engineering-skills
+claude plugin marketplace add hernancham2/skills
 ```
 
 ```bash
-claude plugin install se-requirements@software-engineering-skills
+claude plugin install se-requirements@skills
 ```
 
 Las skills instaladas así se invocan como `/se-requirements:req-elicit`. Para la app de Claude (claude.ai), comprime la carpeta de una skill en un `.zip` y súbelo desde Customize → Skills → **+** → Upload a skill. El nombre de la carpeta debe coincidir con el `name` de la skill, algo que el estándar de este repositorio ya garantiza.
@@ -57,7 +57,7 @@ OpenAI recomienda plugins para distribuir skills a ChatGPT web y móvil. Este re
 ## Gemini CLI y Antigravity
 
 ```bash
-gemini skills install https://github.com/hernancham2/software-engineering-skills.git --path skills/requirements/req-elicit
+gemini skills install https://github.com/hernancham2/skills.git --path skills/requirements/req-elicit
 ```
 
 `--scope workspace` la instala solo en el proyecto actual. Antigravity lee `.agents/skills/` en el proyecto y `~/.gemini/config/skills/` a nivel de usuario; usa `npx skills add ... -a antigravity`.

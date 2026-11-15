@@ -27,7 +27,7 @@ const marketplace = {
   plugins: byPhase
     .filter((g) => g.skills.length)
     .map((g) => ({
-      name: `${config.pluginPrefix}-${g.phase.id}`,
+      name: g.phase.plugin ?? `${config.pluginPrefix}-${g.phase.id}`,
       description: g.phase.description,
       source: './',
       strict: false,
@@ -42,7 +42,8 @@ const withSkills = byPhase.filter((g) => g.skills.length);
 // Full catalog (docs/en/README.md): one table per phase. Links are relative to that file.
 const catalog = byPhase
   .map((g) => {
-    const header = `### ${g.phase.title} (\`${g.phase.prefix}-\`) → \`${g.phase.primitive}\`\n\n${g.phase.description}.\n\n`;
+    const label = g.phase.prefix ? ` (\`${g.phase.prefix}-\`) → \`${g.phase.primitive}\`` : '';
+    const header = `### ${g.phase.title}${label}\n\n${g.phase.description}.\n\n`;
     if (!g.skills.length) return `${header}_No skills yet._`;
     const paths = (value) => contextPaths(value).map((p) => `\`${p}\``).join('<br>') || '—';
     const rows = g.skills.map(
@@ -56,7 +57,7 @@ const catalog = byPhase
 // Compact phase overview (README.md): which file each phase decides and which skills it has.
 const phaseRows = withSkills.map(
   (g) =>
-    `| ${g.phase.title} | \`${g.phase.primitive}\` | ${g.skills.map((s) => `[\`${s.folder}\`](${s.relative}/SKILL.md)`).join(' · ')} |`,
+    `| ${g.phase.title} | ${g.phase.primitive ? `\`${g.phase.primitive}\`` : '—'} | ${g.skills.map((s) => `[\`${s.folder}\`](${s.relative}/SKILL.md)`).join(' · ')} |`,
 );
 const phases = `**${skills.length} skills** in **${withSkills.length} phases**.\n\n| Phase | Decides | Skills |\n| --- | --- | --- |\n${phaseRows.join('\n')}`;
 

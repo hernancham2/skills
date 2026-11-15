@@ -18,7 +18,7 @@ export const contextPaths = (value) =>
 
 /** Finds a phase by id or by prefix. */
 export function findPhase(text) {
-  return config.phases.find((p) => p.id === text || p.prefix === text);
+  return config.phases.find((p) => p.id === text || (p.prefix && p.prefix === text));
 }
 
 const subdirectories = (path) =>

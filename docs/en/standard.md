@@ -17,7 +17,7 @@ skills/<phase>/<prefix>-<name>/
 ```
 
 - ✔ The phase folder must exist in [`skills.config.json`](../../skills.config.json).
-- ✔ The name starts with the prefix of its phase (`req-`, `des-`, `arch-`, `dev-`, `qa-`, `sec-`, `ops-`, `mnt-`, `pm-`).
+- ✔ The name starts with the prefix of its phase (`req-`, `des-`, `arch-`, `dev-`, `qa-`, `sec-`, `ops-`, `mnt-`, `pm-`). The `productivity` group is the exception: it has no prefix, so its skills take a short free name (`grill-me`).
 - ✔ Only lowercase letters, numbers and single hyphens; 64 characters maximum; no `claude` or `anthropic`.
 - ✔ The frontmatter `name` = the folder name, and it is unique across the whole repository.
 - After the prefix, use a verb in the base form or an action noun: `req-elicit`, `qa-strategy`.
@@ -125,4 +125,4 @@ Bump `metadata.version` on every published change:
 
 ## Adding or changing a phase
 
-Edit `phases` in [`skills.config.json`](../../skills.config.json) (`id` = folder name, `prefix` = prefix of the skills, `primitive` = file it owns) and run `npm run generate`. Renaming a prefix requires renaming the skills of that phase.
+Edit `phases` in [`skills.config.json`](../../skills.config.json) (`id` = folder name, `prefix` = prefix of the skills, `primitive` = file it owns; both may be empty for a group that is not a lifecycle phase, and `plugin` sets the plugin name when it should not be `se-<id>`) and run `npm run generate`. Renaming a prefix requires renaming the skills of that phase.

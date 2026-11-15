@@ -110,12 +110,20 @@ Project context, planning, estimation, risks and progress tracking.
 | [`pm-risks`](../../skills/management/pm-risks/SKILL.md) | Use to identify and track the risks of a software project: what can prevent delivering it on time, with the agreed scope or with the agreed quality, with likelihood, impact, response, owner and warning sign. Applies when a risk register or matrix, an analysis of what can go wrong in the project, a contingency plan or a review of the risks before a milestone is requested. Do not use for security threats to the system (sec-threats) or for architecture risks (arch-validate). | `PRODUCT.md`<br>`ARCHITECTURE.md`<br>`ROADMAP.md`<br>`docs/management/risks.md`<br>`docs/management/plan.md` | `ROADMAP.md`<br>`docs/management/risks.md` | 0.2.0 |
 | [`pm-status`](../../skills/management/pm-status/SKILL.md) | Use to know and communicate how a software project is going: compare the plan with what was actually finished, detect deviations and blockers, project when the next milestone will be reached with a range, prepare a status report and propose adjustments to the plan. Applies when a progress report, the project status, whether the date will be met, an iteration review or updating the roadmap with what happened is requested. Do not use to create the initial plan (pm-plan). | `ROADMAP.md`<br>`CHANGELOG.md`<br>`docs/management/plan.md`<br>`docs/management/risks.md`<br>`docs/management/status.md` | `ROADMAP.md`<br>`docs/management/plan.md`<br>`docs/management/status.md` | 0.2.0 |
 
+### Productivity
+
+General-purpose working skills that do not belong to a lifecycle phase: thinking, deciding and communicating better.
+
+| Skill | Description | Reads | Writes | Version |
+| --- | --- | --- | --- | --- |
+| [`grill-me`](../../skills/productivity/grill-me/SKILL.md) | Use when the user wants a plan, idea, design or decision stress-tested before acting on it: interview them one question at a time until the weak points, hidden assumptions and open decisions are out in the open. Applies when they say grill me, challenge this, poke holes, play devil's advocate, or review my plan, and also when a plan is vague and the right move is to question it before building anything. Do not use to gather requirements for a software product (req-elicit) or to review code (dev-review). | — | — | 0.1.0 |
+
 <!-- CATALOG:END -->
 
 ## Repository structure
 
 ```text
-skills/<phase>/<prefix>-<name>/SKILL.md     the skills, grouped by phase
+skills/<phase>/<prefix>-<name>/SKILL.md     the skills, grouped by phase (no prefix in productivity)
 template/SKILL.template.md                  base template for a skill
 skills.config.json                          phases, prefixes and marketplace data
 scripts/                                    create, validate and generate manifests

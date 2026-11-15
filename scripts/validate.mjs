@@ -34,7 +34,7 @@ for (const skill of skills) {
     if (!NAME_REGEX.test(name)) error(`"name" only allows lowercase letters, numbers and single hyphens (got: "${name}")`);
     if (name.length > 64) error(`"name" is longer than 64 characters (${name.length})`);
     if (name !== skill.folder) error(`"name" (${name}) must match the folder name (${skill.folder})`);
-    if (!name.startsWith(`${skill.phase.prefix}-`)) error(`"name" must start with the phase prefix: "${skill.phase.prefix}-"`);
+    if (skill.phase.prefix && !name.startsWith(`${skill.phase.prefix}-`)) error(`"name" must start with the phase prefix: "${skill.phase.prefix}-"`);
     if (/claude|anthropic/.test(name)) error('"name" cannot contain "claude" or "anthropic" (reserved words)');
     if (seenNames.has(name)) error(`duplicate "name"; already used in ${seenNames.get(name)}`);
     else seenNames.set(name, skill.relative);
@@ -75,7 +75,7 @@ for (const skill of skills) {
         if (!isPrimitive && !path.startsWith(`${config.context.workDir}/`)) {
           error(`"metadata.${field}": "${path}" is not a known primitive and is not under ${config.context.workDir}/`);
         } else if (field === 'writes' && isPrimitive && path !== skill.phase.primitive && path !== config.context.index) {
-          error(`"metadata.writes": ${path} belongs to another phase; this skill may only write ${skill.phase.primitive}`);
+          error(`"metadata.writes": ${path} belongs to another phase; ${skill.phase.primitive ? `this skill may only write ${skill.phase.primitive}` : 'this phase has no primitive'}`);
         }
       }
     }
@@ -105,7 +105,7 @@ for (const skill of skills) {
 }
 
 // --- cross-skill checks -----------------------------------------------------
-const prefixes = config.phases.map((p) => p.prefix).join('|');
+const prefixes = config.phases.map((p) => p.prefix).filter(Boolean).join('|');
 const mentionRegex = new RegExp('`((?:' + prefixes + ')-[a-z0-9]+(?:-[a-z0-9]+)*)`', 'g');
 const parsedSkills = skills.map((s) => ({ skill: s, parsed: readSkill(s) })).filter((x) => x.parsed);
 const written = parsedSkills.flatMap((x) => contextPaths(x.parsed.data.metadata?.writes));

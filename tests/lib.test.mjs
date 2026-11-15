@@ -40,3 +40,8 @@ test('findPhase accepts an id or a prefix', () => {
   assert.equal(findPhase('req').id, 'requirements');
   assert.equal(findPhase('nope'), undefined);
 });
+
+test('a group without prefix (productivity) is found by id and never by an empty prefix', () => {
+  assert.equal(findPhase('productivity').prefix, '');
+  assert.equal(findPhase(''), undefined);
+});

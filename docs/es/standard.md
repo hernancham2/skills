@@ -17,7 +17,7 @@ skills/<fase>/<prefijo>-<nombre>/
 ```
 
 - ✔ La carpeta de la fase debe existir en [`skills.config.json`](../../skills.config.json).
-- ✔ El nombre empieza con el prefijo de su fase (`req-`, `des-`, `arch-`, `dev-`, `qa-`, `sec-`, `ops-`, `mnt-`, `pm-`).
+- ✔ El nombre empieza con el prefijo de su fase (`req-`, `des-`, `arch-`, `dev-`, `qa-`, `sec-`, `ops-`, `mnt-`, `pm-`). El grupo `productivity` es la excepción: no tiene prefijo, así que sus skills llevan un nombre corto y libre (`grill-me`).
 - ✔ Solo letras minúsculas, números y guiones simples; 64 caracteres como máximo; sin `claude` ni `anthropic`.
 - ✔ El `name` del frontmatter = el nombre de la carpeta, y es único en todo el repositorio.
 - Tras el prefijo, usa un verbo en forma base o un sustantivo de acción: `req-elicit`, `qa-strategy`.
@@ -125,4 +125,4 @@ Sube `metadata.version` en cada cambio publicado:
 
 ## Añadir o cambiar una fase
 
-Edita `phases` en [`skills.config.json`](../../skills.config.json) (`id` = nombre de la carpeta, `prefix` = prefijo de las skills, `primitive` = archivo del que es dueña) y ejecuta `npm run generate`. Renombrar un prefijo obliga a renombrar las skills de esa fase.
+Edita `phases` en [`skills.config.json`](../../skills.config.json) (`id` = nombre de la carpeta, `prefix` = prefijo de las skills, `primitive` = archivo del que es dueña; ambos pueden quedar vacíos en un grupo que no es una fase del ciclo de vida, y `plugin` fija el nombre del plugin cuando no debe ser `se-<id>`) y ejecuta `npm run generate`. Renombrar un prefijo obliga a renombrar las skills de esa fase.

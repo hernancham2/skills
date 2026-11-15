@@ -33,7 +33,7 @@ El catálogo completo, con la descripción de cada skill, qué lee y qué escrib
 ## Estructura del repositorio
 
 ```text
-skills/<fase>/<prefijo>-<nombre>/SKILL.md   las skills, agrupadas por fase
+skills/<fase>/<prefijo>-<nombre>/SKILL.md   las skills, agrupadas por fase (sin prefijo en productivity)
 template/SKILL.template.md                  plantilla base de una skill
 skills.config.json                          fases, prefijos y datos del marketplace
 scripts/                                    crear, validar y generar manifiestos

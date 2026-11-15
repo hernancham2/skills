@@ -128,6 +128,8 @@ In the body, every skill that takes part carries a **Project context** section t
 - where to save the result and whether it is added or replaced;
 - what to do if there is no repository or files cannot be written: deliver the result in the conversation with the suggested file name.
 
+The `productivity` group is outside this model: it has no primitive, its skills read and write no context files and they can be used in any conversation.
+
 ## Adding a primitive
 
 Add or edit `primitive` in the corresponding phase of `skills.config.json`, document the row in the table above and in [`pm-context`](../../skills/management/pm-context/references/primitives.md), and run `npm run generate`.

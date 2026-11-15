@@ -1,8 +1,8 @@
 {
-  "name": "software-engineering-skills",
+  "name": "skills",
   "version": "0.1.0",
   "private": true,
-  "description": "Software engineering skills organized by lifecycle phase",
+  "description": "Agent Skills for the software lifecycle, plus productivity tools",
   "type": "module",
   "license": "MIT",
   "engines": {
