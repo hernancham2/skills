@@ -102,4 +102,4 @@ For each component define: anatomy, variants, sizes and states. The mandatory st
 - Each state is its own component entry: `button-primary`, `button-primary-hover`, `button-primary-disabled`.
 - A color that no component uses is surplus or is missing its component.
 - Dark mode changes the values of the tokens, not their names.
-- To bring them into code: `npx @google/design.md export --format css-tailwind DESIGN.md` (Tailwind v4), `--format tailwind` (v3) or `--format dtcg` (standard tokens JSON).
+- To bring them into code, map each token to a CSS custom property (`--colors-primary`) or to the Tailwind theme; the names are already lowercase with hyphens, so the mapping is mechanical.

@@ -28,7 +28,7 @@ The separation exists because of the context budget: a primitive is loaded many 
 | Maintenance | `CHANGELOG.md` | What changed and what stops being supported? | `docs/maintenance/` (debt, migrations) |
 | Management | `ROADMAP.md` | What comes next, in what order and with what risks? | `docs/management/` (plan, risks, status) |
 
-The phase → primitive mapping is in [`skills.config.json`](../skills.config.json). Established names are used where they exist: [`AGENTS.md`](https://agents.md), `CONTRIBUTING.md`, `SECURITY.md` and `CHANGELOG.md` are industry conventions, and `DESIGN.md` follows the [open Google Labs format](https://github.com/google-labs-code/design.md) (tokens in YAML plus prose), which tools and agents already know how to read.
+The phase → primitive mapping is in [`skills.config.json`](../skills.config.json). Established names are used where they exist: [`AGENTS.md`](https://agents.md), `CONTRIBUTING.md`, `SECURITY.md` and `CHANGELOG.md` are industry conventions, and `DESIGN.md` has its own structure, defined by `des-guidelines`: tokens in YAML plus prose in a fixed set of sections.
 
 `PRODUCT.md` plays the role that other methods give to a PRD, and `ARCHITECTURE.md` plus the non-functional requirements in `PRODUCT.md` that of a TRD. The difference is that these files are living: they are updated throughout the project instead of being written once and approved.
 

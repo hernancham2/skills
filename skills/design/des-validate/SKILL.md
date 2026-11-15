@@ -5,7 +5,7 @@ license: MIT
 compatibility: "Automatic contrast calculation requires Node.js 18 or later; without Node.js it is calculated by hand with the included formula."
 metadata:
   author: "Hernan"
-  version: "0.3.0"
+  version: "0.4.0"
   phase: "design"
   reads: "DESIGN.md, PRODUCT.md, docs/design/brief.md, docs/design/navigation.md"
   writes: "docs/design/review.md"
@@ -33,15 +33,7 @@ You review design guidelines the way the person who will have to implement them 
 
 ### 0. Format (only if it is a DESIGN.md)
 
-If Node.js and npm access are available, run the format validator and record each error and warning as a finding:
-
-```bash
-npx @google/design.md lint DESIGN.md
-```
-
-In PowerShell: `npx -p @google/design.md designmd lint DESIGN.md`. Its contrast rule only checks the background/text pairs declared in `components`; it does not replace step 2.
-
-If it cannot be run, check by hand: the standard headings in order (Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts), colors between quotes, `{group.token}` references that exist and no repeated top-level key.
+Check by hand and record each failure as a finding: the standard headings in order (Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts), colors between quotes, `{group.token}` references that exist and no repeated top-level key.
 
 ### 1. Completeness
 

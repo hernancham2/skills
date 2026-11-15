@@ -28,7 +28,7 @@ La separación existe por el presupuesto de contexto: una primitiva se carga muc
 | Mantenimiento | `CHANGELOG.md` | ¿Qué cambió y qué deja de tener soporte? | `docs/maintenance/` (debt, migrations) |
 | Gestión | `ROADMAP.md` | ¿Qué viene, en qué orden y con qué riesgos? | `docs/management/` (plan, risks, status) |
 
-La correspondencia fase → primitiva está en [`skills.config.json`](../../skills.config.json). Donde existen nombres establecidos se usan: [`AGENTS.md`](https://agents.md), `CONTRIBUTING.md`, `SECURITY.md` y `CHANGELOG.md` son convenciones de la industria, y `DESIGN.md` sigue el [formato abierto de Google Labs](https://github.com/google-labs-code/design.md) (tokens en YAML más prosa), que herramientas y agentes ya saben leer.
+La correspondencia fase → primitiva está en [`skills.config.json`](../../skills.config.json). Donde existen nombres establecidos se usan: [`AGENTS.md`](https://agents.md), `CONTRIBUTING.md`, `SECURITY.md` y `CHANGELOG.md` son convenciones de la industria, y `DESIGN.md` tiene una estructura propia, definida por `des-guidelines`: tokens en YAML más prosa en un conjunto fijo de secciones.
 
 `PRODUCT.md` cumple el papel que otros métodos dan a un PRD, y `ARCHITECTURE.md` junto con los requisitos no funcionales de `PRODUCT.md` el de un TRD. La diferencia es que estos archivos están vivos: se actualizan durante todo el proyecto en lugar de escribirse una vez y aprobarse.
 

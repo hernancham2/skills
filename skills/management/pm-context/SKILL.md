@@ -4,7 +4,7 @@ description: "Use when starting a software project or picking one back up, to se
 license: MIT
 metadata:
   author: "Hernan"
-  version: "0.3.0"
+  version: "0.3.1"
   phase: "management"
   reads: "AGENTS.md, PRODUCT.md, DESIGN.md, ARCHITECTURE.md, CONTRIBUTING.md, TESTING.md, SECURITY.md, OPERATIONS.md, CHANGELOG.md, ROADMAP.md"
   writes: "AGENTS.md"

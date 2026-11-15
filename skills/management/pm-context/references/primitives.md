@@ -26,7 +26,7 @@ Sign that it is incomplete: goals without a number, empty "out of scope", users 
 
 ## DESIGN.md
 
-Follows the Google Labs format: tokens in the YAML frontmatter (`colors`, `typography`, `rounded`, `spacing`, `components`) and sections in this order: Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts. It may add its own sections (logo, accessibility, voice).
+Follows the structure defined in `des-guidelines`: tokens in the YAML frontmatter (`colors`, `typography`, `rounded`, `spacing`, `components`) and sections in this order: Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts. It may add its own sections (logo, accessibility, voice).
 
 Sign that it is incomplete: colors without an exact value, no `primary`, components without a focus state, text/background pairs without a calculated contrast.
 

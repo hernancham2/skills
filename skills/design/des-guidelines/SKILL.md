@@ -4,7 +4,7 @@ description: "Use when the design guidelines of a software project must be defin
 license: MIT
 metadata:
   author: "Hernan"
-  version: "0.3.0"
+  version: "0.4.0"
   phase: "design"
   reads: "PRODUCT.md, docs/design/brief.md, docs/design/review.md"
   writes: "DESIGN.md"
@@ -42,7 +42,7 @@ Choose the scope based on the project and say so at the start:
 
 ## The DESIGN.md format
 
-`DESIGN.md` follows the open Google Labs format: tokens go in the YAML frontmatter and the explanation in prose below. Always start from [assets/DESIGN.template.md](assets/DESIGN.template.md).
+`DESIGN.md` has a fixed structure defined by this repository: tokens go in the YAML frontmatter and the explanation in prose below. Always start from [assets/DESIGN.template.md](assets/DESIGN.template.md).
 
 | Part | Content |
 | :--- | :--- |
@@ -59,13 +59,13 @@ Choose the scope based on the project and say so at the start:
 
 Format rules that are not obvious:
 
-- The eight standard headings go **exactly as written and in that order**; tools look them up by name. Custom sections go after them.
-- Token names are lowercase with hyphens (`primary`, `on-surface`), so they export unchanged to Tailwind or to DTCG tokens.
+- The eight standard headings go **exactly as written and in that order**, so that every `DESIGN.md` is read the same way by people, agents and `des-validate`. Custom sections go after them.
+- Token names are lowercase with hyphens (`primary`, `on-surface`), so they map unchanged to CSS custom properties, the Tailwind theme or design-token JSON.
 - Each top-level YAML key appears only once in the whole file.
 - A token is referenced between braces and quotes: `"{colors.primary}"`. A reference to a token that does not exist is an error.
 - Colors go in hexadecimal between quotes (`"#1D4ED8"`); without quotes, YAML reads `#` as a comment and the value ends up empty.
 - Dimensions carry a unit (`px`, `rem`, `em`).
-- Define a `primary` color; tools expect it.
+- Define a `primary` color: every other color role is described relative to it.
 - Each state of a component is its own entry: `button-primary`, `button-primary-hover`.
 
 ## A. Full guidelines
@@ -77,13 +77,7 @@ The decision rules for each topic are in [references/criteria.md](references/cri
 3. Define spacing and shapes and, with those bases, the components with all their states.
 4. Complete the custom sections: logo, iconography, motion, accessibility and voice.
 5. List under "Pending decisions" everything marked as *proposal*, with who approves it.
-6. Validate the file. If Node.js and npm access are available:
-
-   ```bash
-   npx @google/design.md lint DESIGN.md
-   ```
-
-   In PowerShell use `npx -p @google/design.md designmd lint DESIGN.md`. Fix all errors and contrast warnings, and run it again until none remain. If it cannot be run, check the format rules above by hand and say so.
+6. Check the file against the format rules above, one by one: headings in order, quoted colors, references that resolve, units on dimensions, no repeated top-level key. Fix what fails and check again. Then recommend running `des-validate` for an independent review, and say which checks you could not run.
 
 ## B. Formalize what exists
 
