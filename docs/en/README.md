@@ -136,4 +136,4 @@ That creates `skills/requirements/req-elicit/SKILL.md` from the template. Then:
 2. `npm run validate` checks the specification and this repository's standard.
 3. `npm run generate` updates the Claude marketplace, the phase overview in the main README and the catalog on this page.
 
-`npm run check` runs the validation and fails if the generated files are out of date; it is what runs in CI.
+`npm run check` runs the validation and fails if the generated files are out of date. Run it before every commit and every pull request.

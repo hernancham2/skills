@@ -7,7 +7,6 @@
 **Agent Skills that guide a software project through its whole lifecycle, from the first requirement to the last release.**
 
 [![Stars](https://img.shields.io/github/stars/hernancham2/software-engineering-skills?style=flat&color=2563EB)](https://github.com/hernancham2/software-engineering-skills/stargazers)
-[![Validate](https://github.com/hernancham2/software-engineering-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/hernancham2/software-engineering-skills/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/github/license/hernancham2/software-engineering-skills?color=2563EB)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/hernancham2/software-engineering-skills?color=2563EB)](https://github.com/hernancham2/software-engineering-skills/commits/main)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-2563EB)](https://agentskills.io/specification)
@@ -108,7 +107,7 @@ npm run new -- req elicit
 npm run check
 ```
 
-`npm run check` validates every skill and fails if the generated files are out of date; it is what runs in CI. The best contribution is a **gotcha**: something an agent got wrong while using a skill, with the correction.
+`npm run check` validates every skill and fails if the generated files are out of date. Run it before every commit and every pull request. The best contribution is a **gotcha**: something an agent got wrong while using a skill, with the correction.
 
 ## License
 

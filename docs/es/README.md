@@ -55,4 +55,4 @@ Eso crea `skills/requirements/req-elicit/SKILL.md` a partir de la plantilla. Des
 2. `npm run validate` comprueba la especificación y el estándar de este repositorio.
 3. `npm run generate` actualiza el marketplace de Claude, el resumen de fases del README principal y el catálogo.
 
-`npm run check` ejecuta la validación y falla si los archivos generados están desactualizados; es lo que corre en CI.
+`npm run check` ejecuta la validación y falla si los archivos generados están desactualizados. Ejecútalo antes de cada commit y de cada pull request.
