@@ -1,0 +1,17 @@
+{
+  "name": "software-engineering-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Software engineering skills organized by lifecycle phase",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "new": "node scripts/new-skill.mjs",
+    "validate": "node scripts/validate.mjs",
+    "generate": "node scripts/generate.mjs",
+    "check": "node scripts/validate.mjs && node scripts/generate.mjs --check"
+  }
+}

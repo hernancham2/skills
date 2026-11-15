@@ -1,0 +1,82 @@
+{
+  "marketplace": {
+    "name": "software-engineering-skills",
+    "description": "Software engineering skills organized by lifecycle phase",
+    "version": "0.1.0"
+  },
+  "author": {
+    "name": "Hernan"
+  },
+  "repository": "hernancham2/software-engineering-skills",
+  "license": "MIT",
+  "pluginPrefix": "se",
+  "context": {
+    "index": "AGENTS.md",
+    "workDir": "docs"
+  },
+  "phases": [
+    {
+      "id": "requirements",
+      "prefix": "req",
+      "title": "Requirements",
+      "primitive": "PRODUCT.md",
+      "description": "Elicitation, analysis, specification and validation of requirements"
+    },
+    {
+      "id": "design",
+      "prefix": "des",
+      "title": "Visual design and brand",
+      "primitive": "DESIGN.md",
+      "description": "Design discovery, visual guidelines (logo, color, typography, components), screen navigation and their validation"
+    },
+    {
+      "id": "architecture",
+      "prefix": "arch",
+      "title": "Architecture and technical design",
+      "primitive": "ARCHITECTURE.md",
+      "description": "Architecture decisions, system design, APIs and data models"
+    },
+    {
+      "id": "development",
+      "prefix": "dev",
+      "title": "Development",
+      "primitive": "CONTRIBUTING.md",
+      "description": "Coding conventions, implementation, refactoring, code review and debugging"
+    },
+    {
+      "id": "testing",
+      "prefix": "qa",
+      "title": "Testing and quality",
+      "primitive": "TESTING.md",
+      "description": "Test strategy, test cases, automation and quality assurance"
+    },
+    {
+      "id": "security",
+      "prefix": "sec",
+      "title": "Security",
+      "primitive": "SECURITY.md",
+      "description": "Threat modeling, security policy and security review"
+    },
+    {
+      "id": "delivery",
+      "prefix": "ops",
+      "title": "Delivery and operations",
+      "primitive": "OPERATIONS.md",
+      "description": "CI/CD, deployment, versioning, observability and incident response"
+    },
+    {
+      "id": "maintenance",
+      "prefix": "mnt",
+      "title": "Maintenance and evolution",
+      "primitive": "CHANGELOG.md",
+      "description": "Changelog, technical debt, migrations and deprecations"
+    },
+    {
+      "id": "management",
+      "prefix": "pm",
+      "title": "Project management",
+      "primitive": "ROADMAP.md",
+      "description": "Project context, planning, estimation, risks and progress tracking"
+    }
+  ]
+}

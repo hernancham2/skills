@@ -1,0 +1,112 @@
+{
+  "name": "software-engineering-skills",
+  "description": "Software engineering skills organized by lifecycle phase",
+  "version": "0.1.0",
+  "owner": {
+    "name": "Hernan"
+  },
+  "plugins": [
+    {
+      "name": "se-requirements",
+      "description": "Elicitation, analysis, specification and validation of requirements",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/requirements/req-elicit",
+        "./skills/requirements/req-specify",
+        "./skills/requirements/req-validate"
+      ]
+    },
+    {
+      "name": "se-design",
+      "description": "Design discovery, visual guidelines (logo, color, typography, components), screen navigation and their validation",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/design/des-discover",
+        "./skills/design/des-guidelines",
+        "./skills/design/des-navigation",
+        "./skills/design/des-validate"
+      ]
+    },
+    {
+      "name": "se-architecture",
+      "description": "Architecture decisions, system design, APIs and data models",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/architecture/arch-define",
+        "./skills/architecture/arch-discover",
+        "./skills/architecture/arch-validate"
+      ]
+    },
+    {
+      "name": "se-development",
+      "description": "Coding conventions, implementation, refactoring, code review and debugging",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/development/dev-conventions",
+        "./skills/development/dev-implement",
+        "./skills/development/dev-review"
+      ]
+    },
+    {
+      "name": "se-testing",
+      "description": "Test strategy, test cases, automation and quality assurance",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/testing/qa-cases",
+        "./skills/testing/qa-strategy",
+        "./skills/testing/qa-validate"
+      ]
+    },
+    {
+      "name": "se-security",
+      "description": "Threat modeling, security policy and security review",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/security/sec-define",
+        "./skills/security/sec-review",
+        "./skills/security/sec-threats"
+      ]
+    },
+    {
+      "name": "se-delivery",
+      "description": "CI/CD, deployment, versioning, observability and incident response",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/delivery/ops-define",
+        "./skills/delivery/ops-discover",
+        "./skills/delivery/ops-incident",
+        "./skills/delivery/ops-validate"
+      ]
+    },
+    {
+      "name": "se-maintenance",
+      "description": "Changelog, technical debt, migrations and deprecations",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/maintenance/mnt-changelog",
+        "./skills/maintenance/mnt-debt",
+        "./skills/maintenance/mnt-migrate"
+      ]
+    },
+    {
+      "name": "se-management",
+      "description": "Project context, planning, estimation, risks and progress tracking",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/management/pm-context",
+        "./skills/management/pm-plan",
+        "./skills/management/pm-risks",
+        "./skills/management/pm-status"
+      ]
+    }
+  ]
+}
