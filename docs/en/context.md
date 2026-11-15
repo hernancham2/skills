@@ -1,6 +1,6 @@
 # Project context
 
-**English** · [Español](es/context.md)
+**English** · [Español](../es/context.md)
 
 The skills in this repository do not work in isolation: each one reads and writes a fixed set of files in the repository of the project where it is used. Those files are the **project context**: what any person or agent needs to read in order to work without asking again what has already been decided.
 
@@ -28,7 +28,7 @@ The separation exists because of the context budget: a primitive is loaded many 
 | Maintenance | `CHANGELOG.md` | What changed and what stops being supported? | `docs/maintenance/` (debt, migrations) |
 | Management | `ROADMAP.md` | What comes next, in what order and with what risks? | `docs/management/` (plan, risks, status) |
 
-The phase → primitive mapping is in [`skills.config.json`](../skills.config.json). Established names are used where they exist: [`AGENTS.md`](https://agents.md), `CONTRIBUTING.md`, `SECURITY.md` and `CHANGELOG.md` are industry conventions, and `DESIGN.md` has its own structure, defined by `des-guidelines`: tokens in YAML plus prose in a fixed set of sections.
+The phase → primitive mapping is in [`skills.config.json`](../../skills.config.json). Established names are used where they exist: [`AGENTS.md`](https://agents.md), `CONTRIBUTING.md`, `SECURITY.md` and `CHANGELOG.md` are industry conventions, and `DESIGN.md` has its own structure, defined by `des-guidelines`: tokens in YAML plus prose in a fixed set of sections.
 
 `PRODUCT.md` plays the role that other methods give to a PRD, and `ARCHITECTURE.md` plus the non-functional requirements in `PRODUCT.md` that of a TRD. The difference is that these files are living: they are updated throughout the project instead of being written once and approved.
 
@@ -119,7 +119,7 @@ metadata:
   writes: "DESIGN.md"
 ```
 
-`npm run validate` checks that the paths are known primitives or are under `docs/`, and that a skill only writes the primitive of its own phase. The README catalog shows what each skill reads and writes.
+`npm run validate` checks that the paths are known primitives or are under `docs/`, and that a skill only writes the primitive of its own phase. The [catalog](README.md#catalog) shows what each skill reads and writes.
 
 In the body, every skill that takes part carries a **Project context** section that says:
 
@@ -129,4 +129,4 @@ In the body, every skill that takes part carries a **Project context** section t
 
 ## Adding a primitive
 
-Add or edit `primitive` in the corresponding phase of `skills.config.json`, document the row in the table above and in [`pm-context`](../skills/management/pm-context/references/primitives.md), and run `npm run generate`.
+Add or edit `primitive` in the corresponding phase of `skills.config.json`, document the row in the table above and in [`pm-context`](../../skills/management/pm-context/references/primitives.md), and run `npm run generate`.

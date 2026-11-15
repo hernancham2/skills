@@ -9,7 +9,7 @@ export const config = JSON.parse(readFileSync(join(ROOT, 'skills.config.json'), 
 
 export const NAME_REGEX = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
-/** Project-context files that skills may read or write (see docs/context.md). */
+/** Project-context files that skills may read or write (see docs/en/context.md). */
 export const PRIMITIVES = new Set([config.context.index, ...config.phases.map((p) => p.primitive).filter(Boolean)]);
 
 /** Turns "A.md, docs/x.md" into ["A.md", "docs/x.md"]. */

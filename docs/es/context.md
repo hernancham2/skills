@@ -1,6 +1,6 @@
 # Contexto del proyecto
 
-[English](../context.md) · **Español**
+[English](../en/context.md) · **Español**
 
 Las skills de este repositorio no funcionan aisladas: cada una lee y escribe un conjunto fijo de archivos en el repositorio del proyecto donde se usa. Esos archivos son el **contexto del proyecto**: lo que cualquier persona o agente necesita leer para trabajar sin volver a preguntar lo que ya se decidió.
 
@@ -119,7 +119,7 @@ metadata:
   writes: "DESIGN.md"
 ```
 
-`npm run validate` comprueba que las rutas sean primitivas conocidas o estén bajo `docs/`, y que una skill solo escriba la primitiva de su propia fase. El catálogo del README muestra qué lee y escribe cada skill.
+`npm run validate` comprueba que las rutas sean primitivas conocidas o estén bajo `docs/`, y que una skill solo escriba la primitiva de su propia fase. El [catálogo](../en/README.md#catalog) muestra qué lee y escribe cada skill.
 
 En el cuerpo, cada skill que participa lleva una sección **Project context** que indica:
 

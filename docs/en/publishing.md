@@ -1,12 +1,12 @@
 # Publishing
 
-**English** · [Español](es/publishing.md)
+**English** · [Español](../es/publishing.md)
 
 The repository is published once, on GitHub, as a public repository. Each platform reads it from there.
 
 Before publishing:
 
-1. If you fork the repository, change `repository` and `author` in [`skills.config.json`](../skills.config.json) and the owner in the [README](../README.md) and in this file.
+1. If you fork the repository, change `repository` and `author` in [`skills.config.json`](../../skills.config.json) and the owner in the [README](../../README.md) and in the files under `docs/`.
 2. `npm run generate` and `npm run check`.
 3. Push the changes to the main branch.
 
@@ -32,7 +32,7 @@ A skill with `metadata.internal: "true"` is hidden from the CLI; it is useful fo
 
 ## Claude Code
 
-The file [`.claude-plugin/marketplace.json`](../.claude-plugin/marketplace.json) turns the repository into a marketplace with one plugin per phase (`se-<phase>`). `npm run generate` produces it; do not edit it by hand.
+The file [`.claude-plugin/marketplace.json`](../../.claude-plugin/marketplace.json) turns the repository into a marketplace with one plugin per phase (`se-<phase>`). `npm run generate` produces it; do not edit it by hand.
 
 ```bash
 claude plugin validate .

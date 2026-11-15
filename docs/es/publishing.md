@@ -1,12 +1,12 @@
 # Publicación
 
-[English](../publishing.md) · **Español**
+[English](../en/publishing.md) · **Español**
 
 El repositorio se publica una sola vez, en GitHub, como repositorio público. Cada plataforma lo lee desde ahí.
 
 Antes de publicar:
 
-1. Si haces un fork, cambia `repository` y `author` en [`skills.config.json`](../../skills.config.json) y el propietario en el [README](../../README.md) y en este archivo.
+1. Si haces un fork, cambia `repository` y `author` en [`skills.config.json`](../../skills.config.json) y el propietario en el [README](../../README.md) y en los archivos de `docs/`.
 2. `npm run generate` y `npm run check`.
 3. Sube los cambios a la rama principal.
 

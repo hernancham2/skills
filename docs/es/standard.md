@@ -1,6 +1,6 @@
 # Estándar de skills
 
-[English](../standard.md) · **Español**
+[English](../en/standard.md) · **Español**
 
 Reglas que debe cumplir toda skill de este repositorio. Las marcadas con ✔ las comprueba `npm run validate`.
 

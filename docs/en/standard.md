@@ -1,6 +1,6 @@
 # Skill standard
 
-**English** · [Español](es/standard.md)
+**English** · [Español](../es/standard.md)
 
 Rules that every skill in this repository must meet. Those marked ✔ are checked by `npm run validate`.
 
@@ -16,7 +16,7 @@ skills/<phase>/<prefix>-<name>/
 └── assets/         optional: output templates, schemas, data
 ```
 
-- ✔ The phase folder must exist in [`skills.config.json`](../skills.config.json).
+- ✔ The phase folder must exist in [`skills.config.json`](../../skills.config.json).
 - ✔ The name starts with the prefix of its phase (`req-`, `des-`, `arch-`, `dev-`, `qa-`, `sec-`, `ops-`, `mnt-`, `pm-`).
 - ✔ Only lowercase letters, numbers and single hyphens; 64 characters maximum; no `claude` or `anthropic`.
 - ✔ The frontmatter `name` = the folder name, and it is unique across the whole repository.
@@ -74,7 +74,7 @@ To check that it activates well, write about twenty realistic requests, half tha
 
 ## 3. Body
 
-Sections of the [template](../template/SKILL.template.md), in this order. They are a starting point: adapt the structure to the task (for example, principles and modes depending on what you are given, as in the `req-*` and `des-*` skills), remove those that do not apply and leave no empty sections.
+Sections of the [template](../../template/SKILL.template.md), in this order. They are a starting point: adapt the structure to the task (for example, principles and modes depending on what you are given, as in the `req-*` and `des-*` skills), remove those that do not apply and leave no empty sections.
 
 | Section | Content |
 | --- | --- |
@@ -125,4 +125,4 @@ Bump `metadata.version` on every published change:
 
 ## Adding or changing a phase
 
-Edit `phases` in [`skills.config.json`](../skills.config.json) (`id` = folder name, `prefix` = prefix of the skills, `primitive` = file it owns) and run `npm run generate`. Renaming a prefix requires renaming the skills of that phase.
+Edit `phases` in [`skills.config.json`](../../skills.config.json) (`id` = folder name, `prefix` = prefix of the skills, `primitive` = file it owns) and run `npm run generate`. Renaming a prefix requires renaming the skills of that phase.

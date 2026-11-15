@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Validates every skill against the Agent Skills specification
 // (https://agentskills.io/specification) and this repository's standard
-// (docs/standard.md). Exits with code 1 if there are errors.
+// (docs/en/standard.md). Exits with code 1 if there are errors.
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { config, contextPaths, listSkills, NAME_REGEX, PRIMITIVES, readSkill } from './lib.mjs';
@@ -68,7 +68,7 @@ for (const skill of skills) {
     if (!/^\d+\.\d+\.\d+$/.test(meta.version ?? '')) error('"metadata.version" must be a quoted semver, e.g. "0.1.0"');
     if (!meta.author) warn('missing "metadata.author"');
 
-    // project context (docs/context.md)
+    // project context (docs/en/context.md)
     for (const field of ['reads', 'writes']) {
       for (const path of contextPaths(meta[field])) {
         const isPrimitive = PRIMITIVES.has(path);
