@@ -4,9 +4,9 @@ description: "Use to review a code change (a diff, a branch, a pull request or s
 license: MIT
 metadata:
   author: "Hernan"
-  version: "0.1.0"
+  version: "0.2.0"
   phase: "development"
-  reads: "AGENTS.md, PRODUCT.md, DESIGN.md, ARCHITECTURE.md, CONTRIBUTING.md, TESTING.md, SECURITY.md"
+  reads: "AGENTS.md, PRODUCT.md, DESIGN.md, ARCHITECTURE.md, CONTRIBUTING.md, TESTING.md, SECURITY.md, docs/development/guides/"
 ---
 
 # Code review
@@ -62,6 +62,7 @@ Review in this order and stop to report if the first point fails seriously: ther
 ### 5. Conventions and interface
 
 - Only the conventions in `CONTRIBUTING.md` that no tool checks: names, error handling, logging, size of the change.
+- Documentation: if the change alters a command, an option, a default or a visible flow, the README and the guides in `docs/development/guides/` that mention it are updated, or the gap is reported (`dev-document`).
 - In the interface: it uses the tokens and components of `DESIGN.md`, defines all the states and keeps focus, contrast and accessible names.
 
 ### 6. Simplicity

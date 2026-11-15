@@ -37,6 +37,7 @@ skills/<fase>/<prefijo>-<nombre>/SKILL.md   las skills, agrupadas por fase
 template/SKILL.template.md                  plantilla base de una skill
 skills.config.json                          fases, prefijos y datos del marketplace
 scripts/                                    crear, validar y generar manifiestos
+tests/                                      pruebas de los scripts (node --test)
 assets/logo.svg                             logo del proyecto
 .claude-plugin/marketplace.json             generado; no se edita a mano
 docs/en/                                    documentación en inglés (fuente de verdad)
@@ -55,4 +56,4 @@ Eso crea `skills/requirements/req-elicit/SKILL.md` a partir de la plantilla. Des
 2. `npm run validate` comprueba la especificación y el estándar de este repositorio.
 3. `npm run generate` actualiza el marketplace de Claude, el resumen de fases del README principal y el catálogo.
 
-`npm run check` ejecuta la validación y falla si los archivos generados están desactualizados. Ejecútalo antes de cada commit y de cada pull request.
+`npm run check` ejecuta la validación, falla si los archivos generados están desactualizados y corre las pruebas de `tests/` (`npm test` ejecuta solo esas). Ejecútalo antes de cada commit y de cada pull request.

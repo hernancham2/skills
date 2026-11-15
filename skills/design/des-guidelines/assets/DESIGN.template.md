@@ -1,5 +1,4 @@
 ---
-version: alpha
 name: "[Project name]"
 description: "[One sentence: visual character of the product]"
 colors:

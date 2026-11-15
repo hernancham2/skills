@@ -68,14 +68,14 @@ Each phase gathers information in `docs/<phase>/`, turns it into decisions in it
 
 <!-- PHASES:START -->
 
-**30 skills** in **9 phases**.
+**31 skills** in **9 phases**.
 
 | Phase | Decides | Skills |
 | --- | --- | --- |
 | Requirements | `PRODUCT.md` | [`req-elicit`](skills/requirements/req-elicit/SKILL.md) · [`req-specify`](skills/requirements/req-specify/SKILL.md) · [`req-validate`](skills/requirements/req-validate/SKILL.md) |
 | Visual design and brand | `DESIGN.md` | [`des-discover`](skills/design/des-discover/SKILL.md) · [`des-guidelines`](skills/design/des-guidelines/SKILL.md) · [`des-navigation`](skills/design/des-navigation/SKILL.md) · [`des-validate`](skills/design/des-validate/SKILL.md) |
 | Architecture and technical design | `ARCHITECTURE.md` | [`arch-define`](skills/architecture/arch-define/SKILL.md) · [`arch-discover`](skills/architecture/arch-discover/SKILL.md) · [`arch-validate`](skills/architecture/arch-validate/SKILL.md) |
-| Development | `CONTRIBUTING.md` | [`dev-conventions`](skills/development/dev-conventions/SKILL.md) · [`dev-implement`](skills/development/dev-implement/SKILL.md) · [`dev-review`](skills/development/dev-review/SKILL.md) |
+| Development | `CONTRIBUTING.md` | [`dev-conventions`](skills/development/dev-conventions/SKILL.md) · [`dev-document`](skills/development/dev-document/SKILL.md) · [`dev-implement`](skills/development/dev-implement/SKILL.md) · [`dev-review`](skills/development/dev-review/SKILL.md) |
 | Testing and quality | `TESTING.md` | [`qa-cases`](skills/testing/qa-cases/SKILL.md) · [`qa-strategy`](skills/testing/qa-strategy/SKILL.md) · [`qa-validate`](skills/testing/qa-validate/SKILL.md) |
 | Security | `SECURITY.md` | [`sec-define`](skills/security/sec-define/SKILL.md) · [`sec-review`](skills/security/sec-review/SKILL.md) · [`sec-threats`](skills/security/sec-threats/SKILL.md) |
 | Delivery and operations | `OPERATIONS.md` | [`ops-define`](skills/delivery/ops-define/SKILL.md) · [`ops-discover`](skills/delivery/ops-discover/SKILL.md) · [`ops-incident`](skills/delivery/ops-incident/SKILL.md) · [`ops-validate`](skills/delivery/ops-validate/SKILL.md) |

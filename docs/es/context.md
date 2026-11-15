@@ -21,7 +21,7 @@ La separación existe por el presupuesto de contexto: una primitiva se carga muc
 | Requisitos | `PRODUCT.md` | ¿Qué se construye, para quién y por qué? | `docs/requirements/` (findings, specification, validation) |
 | Diseño | `DESIGN.md` | ¿Cómo se ve y cómo habla? | `docs/design/` (brief, navigation, review) |
 | Arquitectura | `ARCHITECTURE.md` | ¿Cómo está construido y por qué así? | `docs/architecture/` (drivers, ADRs, review) |
-| Desarrollo | `CONTRIBUTING.md` | ¿Cómo se escribe e integra el código? | `docs/development/` (detected conventions) |
+| Desarrollo | `CONTRIBUTING.md` | ¿Cómo se escribe e integra el código? | `docs/development/` (detected conventions, guides) |
 | Pruebas | `TESTING.md` | ¿Qué se prueba, cómo y con qué umbral? | `docs/testing/` (risks, cases, review) |
 | Seguridad | `SECURITY.md` | ¿Qué se protege, de quién y cómo se reporta? | `docs/security/` (threats, review) |
 | Entrega | `OPERATIONS.md` | ¿Cómo se despliega, se observa y se recupera? | `docs/delivery/` (environment, review, incidents) |
@@ -53,7 +53,7 @@ Cada colección de skills repite el mismo recorrido:
 | **Define** (definir) | Convierte lo reunido en decisiones y resuelve los hallazgos del último informe de validación | `docs/<fase>/` (incluido el informe de validación) y primitivas anteriores | La primitiva de la fase |
 | **Validate** (validar) | Revisa lo decidido antes de construir sobre ello | La primitiva y su material | Un informe (en la conversación o en `docs/<fase>/`) |
 
-No todas las fases siguen el patrón al pie de la letra: algunas unen descubrir y definir en una skill (`dev-conventions`, `qa-strategy`) y otras añaden skills para tareas recurrentes (`dev-implement`, `ops-incident`, `mnt-migrate`).
+No todas las fases siguen el patrón al pie de la letra: algunas unen descubrir y definir en una skill (`dev-conventions`, `qa-strategy`) y otras añaden skills para tareas recurrentes (`dev-implement`, `dev-document`, `ops-incident`, `mnt-migrate`).
 
 ## El recorrido completo
 
@@ -62,7 +62,7 @@ No todas las fases siguen el patrón al pie de la letra: algunas unen descubrir 
 | Requisitos | `req-elicit` | `req-specify` → `PRODUCT.md` | `req-validate` | |
 | Diseño | `des-discover` | `des-guidelines` → `DESIGN.md` | `des-validate` | `des-navigation` |
 | Arquitectura | `arch-discover` | `arch-define` → `ARCHITECTURE.md` | `arch-validate` | |
-| Desarrollo | `dev-conventions` | `dev-conventions` → `CONTRIBUTING.md` | `dev-review` | `dev-implement` |
+| Desarrollo | `dev-conventions` | `dev-conventions` → `CONTRIBUTING.md` | `dev-review` | `dev-implement`, `dev-document` |
 | Pruebas | `qa-strategy` | `qa-strategy` → `TESTING.md` | `qa-validate` | `qa-cases` |
 | Seguridad | `sec-threats` | `sec-define` → `SECURITY.md` | `sec-review` | |
 | Entrega | `ops-discover` | `ops-define` → `OPERATIONS.md` | `ops-validate` | `ops-incident` |
@@ -85,6 +85,7 @@ pm-plan → pm-risks                                         ROADMAP.md
 
 Durante la construcción, en cada tarea:
   dev-implement → dev-review → mnt-changelog               CHANGELOG.md
+  dev-document                                             README y docs/development/guides/
 
 Antes de publicar:
   qa-validate · sec-review · ops-validate

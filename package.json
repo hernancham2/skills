@@ -12,6 +12,7 @@
     "new": "node scripts/new-skill.mjs",
     "validate": "node scripts/validate.mjs",
     "generate": "node scripts/generate.mjs",
-    "check": "node scripts/validate.mjs && node scripts/generate.mjs --check"
+    "test": "node --test",
+    "check": "node scripts/validate.mjs && node scripts/generate.mjs --check && node --test"
   }
 }

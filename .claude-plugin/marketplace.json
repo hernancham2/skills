@@ -47,6 +47,7 @@
       "strict": false,
       "skills": [
         "./skills/development/dev-conventions",
+        "./skills/development/dev-document",
         "./skills/development/dev-implement",
         "./skills/development/dev-review"
       ]

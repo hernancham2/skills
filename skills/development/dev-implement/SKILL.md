@@ -4,7 +4,7 @@ description: "Use when implementing a feature, story, task or fix in a project t
 license: MIT
 metadata:
   author: "Hernan"
-  version: "0.1.0"
+  version: "0.2.0"
   phase: "development"
   reads: "AGENTS.md, PRODUCT.md, DESIGN.md, ARCHITECTURE.md, CONTRIBUTING.md, TESTING.md, SECURITY.md, docs/requirements/specification.md, docs/design/navigation.md"
 ---
@@ -73,6 +73,7 @@ If the change introduced something that a primitive should reflect, say so, with
 | Token, visual component or screen | `DESIGN.md`, `docs/design/navigation.md` | `des-guidelines`, `des-navigation` |
 | Environment variable, deployment step, migration | `OPERATIONS.md` | `ops-define` |
 | User-visible behavior | `CHANGELOG.md` | `mnt-changelog` |
+| How to install, configure or use the product | README and guides in `docs/development/guides/` | `dev-document` |
 
 ## Gotchas
 

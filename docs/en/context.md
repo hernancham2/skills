@@ -21,7 +21,7 @@ The separation exists because of the context budget: a primitive is loaded many 
 | Requirements | `PRODUCT.md` | What is built, for whom and why? | `docs/requirements/` (findings, specification, validation) |
 | Design | `DESIGN.md` | How does it look and how does it speak? | `docs/design/` (brief, navigation, review) |
 | Architecture | `ARCHITECTURE.md` | How is it built and why that way? | `docs/architecture/` (drivers, ADRs, review) |
-| Development | `CONTRIBUTING.md` | How is code written and integrated? | `docs/development/` (detected conventions) |
+| Development | `CONTRIBUTING.md` | How is code written and integrated? | `docs/development/` (detected conventions, guides) |
 | Testing | `TESTING.md` | What is tested, how and with what threshold? | `docs/testing/` (risks, cases, review) |
 | Security | `SECURITY.md` | What is protected, from whom and how is it reported? | `docs/security/` (threats, review) |
 | Delivery | `OPERATIONS.md` | How is it deployed, observed and recovered? | `docs/delivery/` (environment, review, incidents) |
@@ -53,7 +53,7 @@ Each skill collection repeats the same journey:
 | **Define** | Turns what was gathered into decisions, and resolves the findings of the last validation report | `docs/<phase>/` (including the validation report) and earlier primitives | The primitive of the phase |
 | **Validate** | Reviews what was decided before building on it | The primitive and its material | A report (in the conversation or in `docs/<phase>/`) |
 
-Not all phases follow the pattern to the letter: some join discover and define in one skill (`dev-conventions`, `qa-strategy`) and others add skills for recurring tasks (`dev-implement`, `ops-incident`, `mnt-migrate`).
+Not all phases follow the pattern to the letter: some join discover and define in one skill (`dev-conventions`, `qa-strategy`) and others add skills for recurring tasks (`dev-implement`, `dev-document`, `ops-incident`, `mnt-migrate`).
 
 ## The complete journey
 
@@ -62,7 +62,7 @@ Not all phases follow the pattern to the letter: some join discover and define i
 | Requirements | `req-elicit` | `req-specify` → `PRODUCT.md` | `req-validate` | |
 | Design | `des-discover` | `des-guidelines` → `DESIGN.md` | `des-validate` | `des-navigation` |
 | Architecture | `arch-discover` | `arch-define` → `ARCHITECTURE.md` | `arch-validate` | |
-| Development | `dev-conventions` | `dev-conventions` → `CONTRIBUTING.md` | `dev-review` | `dev-implement` |
+| Development | `dev-conventions` | `dev-conventions` → `CONTRIBUTING.md` | `dev-review` | `dev-implement`, `dev-document` |
 | Testing | `qa-strategy` | `qa-strategy` → `TESTING.md` | `qa-validate` | `qa-cases` |
 | Security | `sec-threats` | `sec-define` → `SECURITY.md` | `sec-review` | |
 | Delivery | `ops-discover` | `ops-define` → `OPERATIONS.md` | `ops-validate` | `ops-incident` |
@@ -85,6 +85,7 @@ pm-plan → pm-risks                                         ROADMAP.md
 
 During construction, on each task:
   dev-implement → dev-review → mnt-changelog               CHANGELOG.md
+  dev-document                                             README and docs/development/guides/
 
 Before publishing:
   qa-validate · sec-review · ops-validate

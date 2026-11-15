@@ -4,7 +4,7 @@ description: "Use when the design guidelines of a software project must be defin
 license: MIT
 metadata:
   author: "Hernan"
-  version: "0.4.0"
+  version: "0.4.1"
   phase: "design"
   reads: "PRODUCT.md, docs/design/brief.md, docs/design/review.md"
   writes: "DESIGN.md"

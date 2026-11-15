@@ -2,10 +2,10 @@
 name: des-validate
 description: "Use when design guidelines that are already written must be reviewed, audited or validated before building on them: a DESIGN.md, a style guide, a brand manual applied to software, a color palette or a tokens file. It detects insufficient contrast under WCAG, missing sections, inconsistent values, rules that are ambiguous or impossible to implement, and decisions unsupported by the brief. Also use to check whether a pair of colors is legible or accessible. Do not use to create the guidelines (des-guidelines)."
 license: MIT
-compatibility: "Automatic contrast calculation requires Node.js 18 or later; without Node.js it is calculated by hand with the included formula."
+compatibility: "The automatic format and contrast checks require Node.js 18 or later; without Node.js they are done by hand with the rules and formula in this skill."
 metadata:
   author: "Hernan"
-  version: "0.4.0"
+  version: "0.5.0"
   phase: "design"
   reads: "DESIGN.md, PRODUCT.md, docs/design/brief.md, docs/design/navigation.md"
   writes: "docs/design/review.md"
@@ -33,7 +33,15 @@ You review design guidelines the way the person who will have to implement them 
 
 ### 0. Format (only if it is a DESIGN.md)
 
-Check by hand and record each failure as a finding: the standard headings in order (Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts), colors between quotes, `{group.token}` references that exist and no repeated top-level key.
+Run the format checker and record each error as a finding:
+
+```bash
+node scripts/check-design.mjs DESIGN.md
+```
+
+It checks the frontmatter and the eight standard sections: headings present and in order (Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts), a `primary` color, colors in quotes and in hexadecimal, `{group.token}` references that exist, units on dimensions and no repeated key. Its warnings (colors that no component uses, a component whose text/background pair is below 4.5:1) feed steps 2 and 3; they do not replace them.
+
+Without Node.js, check those same rules by hand.
 
 ### 1. Completeness
 
