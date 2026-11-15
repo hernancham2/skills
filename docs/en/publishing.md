@@ -43,7 +43,7 @@ claude plugin marketplace add hernancham2/skills
 ```
 
 ```bash
-claude plugin install se-requirements@skills
+claude plugin install se-requirements@hernancham2-skills
 ```
 
 Skills installed this way are invoked as `/se-requirements:req-elicit`. For the Claude app (claude.ai), compress a skill's folder into a `.zip` and upload it from Customize → Skills → **+** → Upload a skill. The folder name must match the skill's `name`, which this repository's standard already guarantees.
